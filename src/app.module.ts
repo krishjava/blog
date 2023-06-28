@@ -7,7 +7,7 @@ import { AuthModule } from './auth/auth.module';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'containers-us-west-145.railway.app',
-      port: +process.env.DB_HOST,
+      port: 7664,
       username: 'root',
       password: 'AGT5IsfjnWN2ZRei7GmA',
       database: 'railway',
