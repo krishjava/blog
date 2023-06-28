@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 
@@ -12,13 +10,13 @@ import { AuthModule } from './auth/auth.module';
       port: +process.env.DB_HOST,
       username: 'root',
       password: 'root',
-      database: process.env.DB_NAME,
-      entities: [],
+      database: 'railway',
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, 
     }),
     AuthModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
