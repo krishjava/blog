@@ -1,32 +1,34 @@
 import { IsNotEmpty, IsString, IsEmail, Length } from 'class-validator';
+import { ReferCodeEntity } from 'src/db/entities/refercode.entity';
 
 export class UserDto {
-    @IsNotEmpty()
-    @IsString()
-    @Length(4, 10)
-    firstname:string;
+  @IsNotEmpty()
+  @IsString()
+  @Length(4, 10)
+  firstname: string;
 
-    @IsNotEmpty()
-    @IsString()
-    @Length(4, 10)
-    lastname:string; 
-    
-    @IsNotEmpty()
-    @IsEmail()
-    @Length(8, 30)
-    email:string; 
+  @IsNotEmpty()
+  @IsString()
+  @Length(4, 10)
+  lastname: string;
 
-    @IsNotEmpty()
-    @IsString()
-    @Length(8)
-    password:string; 
+  @IsNotEmpty()
+  @IsEmail()
+  @Length(8, 30)
+  email: string;
 
-    @IsNotEmpty()
-    @IsString()
-    @Length(10, 10)
-    mobile:string;
+  @IsNotEmpty()
+  @IsString()
+  @Length(8)
+  password: string;
 
-    otp:number;
-    isActive:boolean;  
-    createdDate: Date;
+  @IsNotEmpty()
+  @IsString()
+  @Length(10, 10)
+  mobile: string;
+
+  otp: number;
+  isActive: boolean;
+  createdDate: Date;
+  referralCode: ReferCodeEntity;
 }

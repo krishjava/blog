@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
       password: 'root',
       database: 'railway',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true, 
+      synchronize: true,
     }),
     AuthModule,
   ],
