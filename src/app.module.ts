@@ -6,10 +6,10 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'containers-us-west-145.railway.app',
       port: +process.env.DB_HOST,
       username: 'root',
-      password: 'root',
+      password: 'AGT5IsfjnWN2ZRei7GmA',
       database: 'railway',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, 
