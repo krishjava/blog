@@ -9,7 +9,7 @@ import { AuthModule } from './auth/auth.module';
       host: 'containers-us-west-145.railway.app',
       port: 7664,
       username: 'root',
-      password: 'AGT5IsfjnWN2ZRei7GmA',
+      password: 'root',
       database: 'railway',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, 
