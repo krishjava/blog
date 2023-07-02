@@ -31,4 +31,6 @@ export class UserDto {
   isActive: boolean;
   createdDate: Date;
   referralCode: ReferCodeEntity;
+
+  referby: string;
 }
