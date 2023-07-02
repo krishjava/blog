@@ -16,7 +16,7 @@ import { ConfigModule } from '@nestjs/config';
       password: 'w89MC0Fu5usNSxxhOZ8R',
       database: 'railway',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true,
+      synchronize: false,
     }),
     ConfigModule.forRoot({
       isGlobal: true,
