@@ -5,10 +5,12 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import generateReferCode from 'src/common/helpers/referral.code';
 import { ReferCodeEntity } from 'src/db/entities/refercode.entity';
+import { MailService } from 'src/mail/mail.service';
 
 @Injectable()
 export class AuthService {
   constructor(
+    private readonly mailService: MailService,
     @InjectRepository(UserEntity)
     private readonly userRepository: Repository<UserEntity>,
     @InjectRepository(ReferCodeEntity)
@@ -72,5 +74,9 @@ export class AuthService {
       codes.push(gencode);
     }
     this.rcRepository.save(codes);
+  }
+
+  async sendMail() {
+    return await this.mailService.sendMail('', '');
   }
 }

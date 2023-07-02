@@ -4,9 +4,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from 'src/db/entities/user.entity';
 import { AuthService } from './auth.service';
 import { ReferCodeEntity } from 'src/db/entities/refercode.entity';
+import { MailModule } from 'src/mail/mail.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([UserEntity, ReferCodeEntity])],
+  imports: [
+    TypeOrmModule.forFeature([UserEntity, ReferCodeEntity]),
+    MailModule,
+  ],
   controllers: [AuthController],
   providers: [AuthService],
 })

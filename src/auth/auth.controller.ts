@@ -17,4 +17,10 @@ export class AuthController {
   async handleUser(@Body() userDto: UserDto): Promise<any> {
     return await this.authService.createUser(userDto);
   }
+
+  @Post('/send-email')
+  @HttpCode(200)
+  async sandMail() {
+    return await this.authService.sendMail();
+  }
 }
